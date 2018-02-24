@@ -4,24 +4,6 @@ button {
     color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-    .containerStyle {
-        background-color: #2d3436;
-        width: 50%;
-    }
-
-    .formWrapperStyle {
-        width: 100%;
-        background-color: #2d3436;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:    "header"
-                                "progressbar"
-                                "form"
-                                "button";
-    }
-}
-
 .containerStyle {
     width: 100%;
 }
@@ -149,4 +131,10 @@ button {
     grid-area: work;
     display: flex;
     flex-direction: column;
+}
+
+@media all and (max-width: 768px) {
+    body {
+        display: none;
+    }
 }
