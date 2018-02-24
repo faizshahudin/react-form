@@ -1,0 +1,152 @@
+button {
+    width: 200pt;
+    background: #2d3436;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .containerStyle {
+        background-color: #2d3436;
+        width: 50%;
+    }
+
+    .formWrapperStyle {
+        width: 100%;
+        background-color: #2d3436;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "header"
+                                "progressbar"
+                                "form"
+                                "button";
+    }
+}
+
+.containerStyle {
+    width: 100%;
+}
+
+.formWrapperStyle {
+    width: 100%;
+    background-color: #fab1a0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "header header"
+                        "form progressbar"
+                        "button button";
+    border-radius: 10pt;
+}
+
+.headerStyle {
+    width: 100%;
+    grid-area: header;
+    background-color: #d63031;
+    border-top-left-radius: 10pt;
+    border-top-right-radius: 10pt;
+    text-align: center;
+}
+
+.formStyle {
+    right: 0;
+    left: 0;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "name name"
+                            "ic ic"
+                            "nat nat"
+                            "dob gender"
+                            "address address"
+                            "postcode state"
+                            "phone phone"
+                            "email email"
+                            "work work";
+    margin-Top: 26pt;
+    margin-bottom: 26pt;
+    margin-left: 16pt;
+    margin-right: 16pt;
+}
+
+.progressSectionStyle {
+    width: 100%;
+    grid-area: progressbar;
+    background-color: #ff7675;
+}
+
+.navSectionStyle {
+    width: 100%;
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    width: 100%;
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+}
+
+.ic {
+    grid-area: ic;
+    display: flex;
+    flex-direction: column;
+}
+
+.nat {
+    grid-area: nat;
+    display: flex;
+    flex-direction: column;
+}
+
+.dob {
+    grid-area: dob;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16pt;
+}
+
+.gender {
+    grid-area: gender;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16pt;
+}
+
+.address {
+    grid-area: address;
+    display: flex;
+    flex-direction: column;
+}
+
+.postcode {
+    grid-area: postcode;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16pt;
+}
+
+.state {
+    grid-area: state;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16pt;
+}
+
+.phone {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+}
+
+.work {
+    grid-area: work;
+    display: flex;
+    flex-direction: column;
+}
