@@ -1,6 +1,30 @@
 const React = require('react');
 
 class PersonalDetail extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            ic: '',
+            nat: '',
+            dob: '',
+            gender: '',
+            address: '',
+            postcode: '',
+            state: '',
+            phone: '',
+            email: '',
+            work: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({ value: event.target.value });
+    }
+
     render() {
         return (
             <form
@@ -15,6 +39,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        value={this.state.name}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -26,6 +51,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" i.e: XXXXXX-XX-XXXX"
                         type="text"
+                        value={this.state.ic}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -37,6 +63,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        value={this.state.nat}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -48,6 +75,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" DD/MM/YYYY"
                         type="text"
+                        value={this.state.dob}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -56,6 +84,7 @@ class PersonalDetail extends React.Component {
                         Gender
                     </label>
                     <select className="inputStyle">
+
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -69,6 +98,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        value={this.state.address}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -80,6 +110,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        value={this.state.postcode}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -89,22 +120,22 @@ class PersonalDetail extends React.Component {
                     </label>
                     <select className="inputStyle">
                         <option value="" selected disabled hidden>Choose here</option>
-                        <option>Selangor</option>
-                        <option>Sarawak</option>
-                        <option>Johor</option>
-                        <option>Penang</option>
-                        <option>Sabah</option>
-                        <option>Perak</option>
-                        <option>Pahang</option>
-                        <option>Negeri Sembilan</option>
-                        <option>Kelantan</option>
-                        <option>Kedah</option>
-                        <option>Melaka</option>
-                        <option>Terengganu</option>
-                        <option>Perlis</option>
-                        <option>Kuala Lumpur</option>
-                        <option>Labuan</option>
-                        <option>Putrajaya</option>
+                        <option value="Selangor">Selangor</option>
+                        <option value="Sarawak">Sarawak</option>
+                        <option value="Johor">Johor</option>
+                        <option value="Penang">Penang</option>
+                        <option value="Sabah">Sabah</option>
+                        <option value="Perak">Perak</option>
+                        <option value="Pahang">Pahang</option>
+                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option value="Kelantan">Kelantan</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Melaka">Melaka</option>
+                        <option value="Terengganu">Terengganu</option>
+                        <option value="Perlis">Perlis</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        <option value="Labuan">Labuan</option>
+                        <option value="Putrajaya">Putrajaya</option>
                     </select>
                 </div>
                 <div className="phone">
