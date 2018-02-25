@@ -16,7 +16,7 @@ class App extends React.Component {
                <div className="containerStyle">
                    <div className="formWrapperStyle">
                        <div className="headerStyle">
-                           <h3 style={styles.headerTextStyle}>Application Form</h3>
+                           <h3 className="headerTextStyle">Application Form</h3>
                        </div>
                        <Switch>
                            <Route exact path="/" component={PersonalDetail} />
@@ -37,13 +37,5 @@ class App extends React.Component {
        );
    }
 }
-
-const styles = {
-   headerTextStyle: {
-       fontFamily: 'Open Sans',
-       fontWeight: 'regular',
-       color: 'white',
-   },
-};
 
 module.exports = App;

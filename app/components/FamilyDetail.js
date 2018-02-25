@@ -8,178 +8,187 @@ class FamilyDetail extends React.Component {
                 onSubmit={this.handleSubmit}
             >
                 <div className="name">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Name
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="relation">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Relationship with Applicant
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="nat">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Nationality
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="ic">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         IC/Passport Number
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="address">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Permanent Address
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="postcode">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Postcode
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
+                    <text>*same as mailing address</text>
                 </div>
                 <div className="state">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         State
                     </label>
-                    <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
-                        onChange={this.handleChange}
-                    />
+                    <select className="inputStyle">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option>Selangor</option>
+                        <option>Sarawak</option>
+                        <option>Johor</option>
+                        <option>Penang</option>
+                        <option>Sabah</option>
+                        <option>Perak</option>
+                        <option>Pahang</option>
+                        <option>Negeri Sembilan</option>
+                        <option>Kelantan</option>
+                        <option>Kedah</option>
+                        <option>Melaka</option>
+                        <option>Terengganu</option>
+                        <option>Perlis</option>
+                    </select>
                 </div>
                 <div className="phone">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Phone Number
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
-                        type="text"
+                        type="tel"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="email">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Email Address
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="work">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Currently working?
                     </label>
-                    <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
-                        onChange={this.handleChange}
-                    />
+                    <select className="inputStyle">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
                 <div className="tax">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Income Tax Number
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="epf">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         EPF Number
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="occupation">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Occupation
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="gross">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Gross Salary
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="net">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Net Salary
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="depend">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Number of family dependants
                     </label>
                     <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
+                        className="inputStyle"
+                        type="number"
                         onChange={this.handleChange}
                     />
                 </div>
@@ -187,18 +196,5 @@ class FamilyDetail extends React.Component {
         );
     }
 }
-
-const styles = {
-    labelStyle: {
-        fontWeight: 'regular',
-        paddingBottom: 15,
-        fontFamily: 'Open Sans',
-    },
-    inputStyle: {
-        borderRadius: 7,
-        marginBottom: 30,
-        height: 25,
-    },
-};
 
 module.exports = FamilyDetail;

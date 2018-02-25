@@ -83,7 +83,8 @@ class PersonalDetail extends React.Component {
                     <label className="labelStyle">
                         Gender
                     </label>
-                    <select className="inputStyle" onChange={this.handleChange}>
+                    <select className="inputStyle">
+
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -117,7 +118,7 @@ class PersonalDetail extends React.Component {
                     <label className="labelStyle">
                         State
                     </label>
-                    <select className="inputStyle" onChange={this.handleChange}>
+                    <select className="inputStyle">
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="Selangor">Selangor</option>
                         <option value="Sarawak">Sarawak</option>
@@ -132,6 +133,9 @@ class PersonalDetail extends React.Component {
                         <option value="Melaka">Melaka</option>
                         <option value="Terengganu">Terengganu</option>
                         <option value="Perlis">Perlis</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        <option value="Labuan">Labuan</option>
+                        <option value="Putrajaya">Putrajaya</option>
                     </select>
                 </div>
                 <div className="phone">
