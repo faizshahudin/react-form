@@ -102,6 +102,9 @@ class PersonalDetail extends React.Component {
                         <option>Melaka</option>
                         <option>Terengganu</option>
                         <option>Perlis</option>
+                        <option>Kuala Lumpur</option>
+                        <option>Labuan</option>
+                        <option>Putrajaya</option>
                     </select>
                 </div>
                 <div className="phone">
