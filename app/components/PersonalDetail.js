@@ -8,142 +8,137 @@ class PersonalDetail extends React.Component {
                 onSubmit={this.handleSubmit}
             >
                 <div className="name">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Full Name (As per IC)
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="ic">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         IC Number
                     </label>
                     <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
+                        className="inputStyle"
+                        placeholder=" i.e: XXXXXX-XX-XXXX"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="nat">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Nationality
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="dob">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Date of Birth
                     </label>
                     <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
+                        className="inputStyle"
+                        placeholder=" DD/MM/YYYY"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="gender">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Gender
                     </label>
-                    <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
-                        onChange={this.handleChange}
-                    />
+                    <select className="inputStyle">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
                 </div>
                 <div className="address">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Permanent Address
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="postcode">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Postcode
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="state">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         State
                     </label>
-                    <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
-                        onChange={this.handleChange}
-                    />
+                    <select className="inputStyle">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option>Selangor</option>
+                        <option>Sarawak</option>
+                        <option>Johor</option>
+                        <option>Penang</option>
+                        <option>Sabah</option>
+                        <option>Perak</option>
+                        <option>Pahang</option>
+                        <option>Negeri Sembilan</option>
+                        <option>Kelantan</option>
+                        <option>Kedah</option>
+                        <option>Melaka</option>
+                        <option>Terengganu</option>
+                        <option>Perlis</option>
+                    </select>
                 </div>
                 <div className="phone">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Phone Number
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
-                        type="text"
+                        type="tel"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="email">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Email Address
                     </label>
                     <input
-                        style={styles.inputStyle}
+                        className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="work">
-                    <label style={styles.labelStyle}>
+                    <label className="labelStyle">
                         Are you currently working?
                     </label>
-                    <input
-                        style={styles.inputStyle}
-                        placeholder=" Type something here"
-                        type="text"
-                        onChange={this.handleChange}
-                    />
+                    <select className="inputStyle">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
             </form>
         );
     }
 }
-
-const styles = {
-    labelStyle: {
-        fontWeight: 'regular',
-        paddingBottom: 15,
-        fontFamily: 'Open Sans',
-    },
-    inputStyle: {
-        borderRadius: 7,
-        marginBottom: 30,
-        height: 25,
-    },
-};
 
 module.exports = PersonalDetail;
