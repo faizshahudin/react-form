@@ -16,12 +16,10 @@
     ],
     "rules": {
         "indent": [
-            "error",
-            "space"
+            "off"
         ],
         "linebreak-style": [
-            "error",
-            "unix"
+            "off"
         ],
         "quotes": [
             "error",
