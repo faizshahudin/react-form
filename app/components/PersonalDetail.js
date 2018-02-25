@@ -4,7 +4,7 @@ class PersonalDetail extends React.Component {
     render() {
         return (
             <form
-                className="formStyle"
+                className="personalFormStyle"
                 onSubmit={this.handleSubmit}
             >
                 <div className="name">

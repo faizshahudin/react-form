@@ -27,13 +27,23 @@ class Nav extends React.Component {
         if (pageLink === '/family') {
             return (
                 <NavLink exact activeClassName="active" to="/" >
-                    <button onClick={this.previousButtonClick}>Previous</button>
+                    <button
+                        className="previousButtonStyle" 
+                        onClick={this.previousButtonClick}
+                    >
+                        Previous
+                    </button>
                 </NavLink>
             );
         }
         return (
             <NavLink exact activeClassName="active" to="/family" >
-                <button onClick={this.nextButtonClick}>Next</button>
+                <button 
+                    className="nextButtonStyle"
+                    onClick={this.nextButtonClick}
+                >
+                    Next
+                </button>
             </NavLink>
         );
     }

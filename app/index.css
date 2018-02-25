@@ -1,29 +1,13 @@
 button {
-    width: 200pt;
-    background: #2d3436;
-    color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-    .containerStyle {
-        background-color: #2d3436;
-        width: 50%;
-    }
-
-    .formWrapperStyle {
-        width: 100%;
-        background-color: #2d3436;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:    "header"
-                                "progressbar"
-                                "form"
-                                "button";
-    }
+    border-radius: 10pt;
+    width: 100pt;
+    margin-bottom: 30pt;
+    height: 20pt;
 }
 
 .containerStyle {
-    width: 100%;
+    width: 75%;
+    margin: auto;
 }
 
 .formWrapperStyle {
@@ -46,7 +30,7 @@ button {
     text-align: center;
 }
 
-.formStyle {
+.personalFormStyle {
     right: 0;
     left: 0;
     grid-area: form;
@@ -61,6 +45,32 @@ button {
                             "phone phone"
                             "email email"
                             "work work";
+    margin-Top: 26pt;
+    margin-bottom: 26pt;
+    margin-left: 16pt;
+    margin-right: 16pt;
+}
+
+.familyFormStyle {
+    right: 0;
+    left: 0;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name name"
+                        "relation relation"
+                        "nat nat"
+                        "ic ic"
+                        "address address"
+                        "postcode state"
+                        "phone phone"
+                        "email email"
+                        "work work"
+                        "tax tax"
+                        "epf epf"
+                        "occu occu"
+                        "gross net"
+                        "depend depend";
     margin-Top: 26pt;
     margin-bottom: 26pt;
     margin-left: 16pt;
@@ -149,4 +159,147 @@ button {
     grid-area: work;
     display: flex;
     flex-direction: column;
+}
+
+.relation {
+    grid-area: relation;
+    display: flex;
+    flex-direction: column;
+}
+
+.tax {
+    grid-area: tax;
+    display: flex;
+    flex-direction: column;
+}
+
+.gross {
+    grid-area: gross;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16pt;
+}
+
+.net {
+    grid-area: net;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16pt;
+}
+
+.occupation {
+    grid-area: occu;
+    display: flex;
+    flex-direction: column;
+}
+
+.depend {
+    grid-area: depend;
+    display: flex;
+    flex-direction: column;
+}
+
+.epf {
+    grid-area: epf;
+    display: flex;
+    flex-direction: column;
+}
+
+.nextButtonStyle {
+    background-color: #d63031;
+    color: #ffffff;
+}
+
+.previousButtonStyle {
+    background-color: #ffffff;
+    border-color: #d63031;
+}
+
+@media all and (max-width: 768pt) {
+    .containerStyle {
+        width: 100%;
+    }
+    .formWrapperStyle {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "header"
+                                "progressbar"
+                                "form"
+                                "button";
+    }
+
+    .personalFormStyle {
+        right: 0;
+        left: 0;
+        grid-area: form;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "name"
+                                "ic"
+                                "nat"
+                                "dob" 
+                                "gender"
+                                "address"
+                                "postcode" 
+                                "state"
+                                "phone"
+                                "email"
+                                "work";
+        margin-Top: 26pt;
+        margin-bottom: 26pt;
+        margin-left: 16pt;
+        margin-right: 16pt;
+    }
+
+    .familyFormStyle {
+        right: 0;
+        left: 0;
+        grid-area: form;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "name"
+                            "relation"
+                            "nat"
+                            "ic"
+                            "address"
+                            "postcode"
+                            "state"
+                            "phone"
+                            "email"
+                            "work"
+                            "tax"
+                            "epf"
+                            "occu"
+                            "gross"
+                            "net"
+                            "depend";
+        margin-Top: 26pt;
+        margin-bottom: 26pt;
+        margin-left: 16pt;
+        margin-right: 16pt;
+    }
+
+    .dob {
+        margin: 0;
+    }
+    
+    .gender {
+        margin: 0;
+    }
+    
+    .postcode {
+        margin: 0;
+    }
+    
+    .state {
+        margin: 0;
+    }
+
+    .gross {
+        margin: 0;
+    }
+
+    .net {
+        margin: 0;
+    }
 }
