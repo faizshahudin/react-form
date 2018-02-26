@@ -7,6 +7,8 @@ class Nav extends React.Component {
 
         this.state = {
             pageLink: '',
+            nextPage: '',
+            previousPage: ''
         };
 
         this.nextButtonClick = this.nextButtonClick.bind(this);
@@ -26,16 +28,19 @@ class Nav extends React.Component {
 
         if (pageLink === '/family') {
             return (
-                <NavLink exact activeClassName="active" to="/" >
-                    <button
-                        className="previousButtonStyle" 
-                        onClick={this.previousButtonClick}
-                    >
-                        Previous
-                    </button>
-                </NavLink>
+                <div>
+                    <NavLink exact activeClassName="active" to="/" >
+                        <button
+                            className="previousButtonStyle" 
+                            onClick={this.previousButtonClick}
+                        >
+                            Previous
+                        </button>
+                    </NavLink>
+                </div>
             );
         }
+        
         return (
             <NavLink exact activeClassName="active" to="/family" >
                 <button 

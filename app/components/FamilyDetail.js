@@ -1,11 +1,31 @@
 const React = require('react');
 
 class FamilyDetail extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '', relation: '', ic: '', nat: '',
+            address: '', postcode: '', state: '', 
+            phone: '', email: '', work: '',
+            tax: '', epf: '', gross: '', net: '',
+            depend: '', occupation: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState({ [name]: value });
+    }
+
     render() {
         return (
             <form
                 className="familyFormStyle"
-                onSubmit={this.handleSubmit}
             >
                 <div className="name">
                     <label className="labelStyle">
@@ -15,6 +35,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="name"
+                        value={this.state.name}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -26,6 +48,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="relation"
+                        value={this.state.relation}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -37,6 +61,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="nat"
+                        value={this.state.nat}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -48,6 +74,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="ic"
+                        value={this.state.ic}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -59,6 +87,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="address"
+                        value={this.state.address}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -70,6 +100,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="postcode"
+                        value={this.state.postcode}
                         onChange={this.handleChange}
                     />
                     <text>*same as mailing address</text>
@@ -78,21 +110,24 @@ class FamilyDetail extends React.Component {
                     <label className="labelStyle">
                         State
                     </label>
-                    <select className="inputStyle">
+                    <select className="inputStyle" name="state" onChange={this.handleChange}>
                         <option value="" selected disabled hidden>Choose here</option>
-                        <option>Selangor</option>
-                        <option>Sarawak</option>
-                        <option>Johor</option>
-                        <option>Penang</option>
-                        <option>Sabah</option>
-                        <option>Perak</option>
-                        <option>Pahang</option>
-                        <option>Negeri Sembilan</option>
-                        <option>Kelantan</option>
-                        <option>Kedah</option>
-                        <option>Melaka</option>
-                        <option>Terengganu</option>
-                        <option>Perlis</option>
+                        <option value="Selangor">Selangor</option>
+                        <option value="Sarawak">Sarawak</option>
+                        <option value="Johor">Johor</option>
+                        <option value="Penang">Penang</option>
+                        <option value="Sabah">Sabah</option>
+                        <option value="Perak">Perak</option>
+                        <option value="Pahang">Pahang</option>
+                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option value="Kelantan">Kelantan</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Melaka">Melaka</option>
+                        <option value="Terengganu">Terengganu</option>
+                        <option value="Perlis">Perlis</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        <option value="Putrajaya">Putrajaya</option>
+                        <option value="Labuan">Labuan</option>
                     </select>
                 </div>
                 <div className="phone">
@@ -103,6 +138,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="tel"
+                        name="phone"
+                        value={this.state.phone}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -114,6 +151,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="email"
+                        value={this.state.email}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -121,7 +160,7 @@ class FamilyDetail extends React.Component {
                     <label className="labelStyle">
                         Currently working?
                     </label>
-                    <select className="inputStyle">
+                    <select className="inputStyle" name="work" onChange={this.handleChange}>
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -135,6 +174,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="tax"
+                        value={this.state.tax}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -146,6 +187,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="epf"
+                        value={this.state.epf}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -157,6 +200,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="occupation"
+                        value={this.state.occupation}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -168,6 +213,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="gross"
+                        value={this.state.gross}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -179,6 +226,8 @@ class FamilyDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="net"
+                        value={this.state.net}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -189,6 +238,8 @@ class FamilyDetail extends React.Component {
                     <input
                         className="inputStyle"
                         type="number"
+                        name="depend"
+                        value={this.state.depend}
                         onChange={this.handleChange}
                     />
                 </div>
