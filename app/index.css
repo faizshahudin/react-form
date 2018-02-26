@@ -89,6 +89,20 @@ text {
     margin-right: 16pt;
 }
 
+.uploadFormStyle {
+    right: 0;
+    left: 0;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "upload-file upload-file"
+                        "upload-file upload-file";
+    margin-Top: 26pt;
+    margin-bottom: 26pt;
+    margin-left: 16pt;
+    margin-right: 16pt;
+}
+
 .progressSectionStyle {
     width: 100%;
     grid-area: progressbar;
@@ -236,6 +250,14 @@ text {
     margin-bottom: 30pt;
 }
 
+.upload-file {
+    width: 100%;
+    grid-area: upload-file;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30pt;
+}
+
 .labelStyle {
     font-weight: normal;
     padding-bottom: 15pt;    
@@ -245,6 +267,11 @@ text {
 .inputStyle {
     border-radius: 7pt;
     height: 20pt;
+}
+
+.inputFileStyle {
+    border-radius: 7pt;
+    height: 60pt;
 }
 
 .nextButtonStyle {
