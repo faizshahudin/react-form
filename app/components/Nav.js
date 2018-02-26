@@ -6,21 +6,18 @@ class Nav extends React.Component {
         super(props);
 
         this.state = {
-            pageLink: '',
-            nextPage: '',
-            previousPage: ''
+            pageLink: ''
         };
 
-        this.nextButtonClick = this.nextButtonClick.bind(this);
-        this.previousButtonClick = this.previousButtonClick.bind(this);
+        this.onButtonClick = this.onButtonClick.bind(this);
     }
 
-    nextButtonClick() {
-        this.setState({ pageLink: '/family' });
+    onButtonClick(event) {
+        this.setState({ pageLink: event.target.value });
     }
 
-    previousButtonClick() {
-        this.setState({ pageLink: '/' });
+    previousButtonClick(event) {
+        this.setState({ pageLink: event.target.value });
     }
 
     render() {
@@ -32,12 +29,44 @@ class Nav extends React.Component {
                     <NavLink exact activeClassName="active" to="/" >
                         <button
                             className="previousButtonStyle" 
-                            onClick={this.previousButtonClick}
+                            value="/"
+                            onClick={this.onButtonClick}
                         >
                             Previous
                         </button>
                     </NavLink>
+                    <NavLink exact activeClassName="active" to="/upload" >
+                        <button
+                            className="nextButtonStyle"
+                            value="/upload"
+                            onClick={this.onButtonClick}
+                        >
+                            Next
+                        </button>
+                    </NavLink>
                 </div>
+            );
+        } else if (pageLink === '/upload') {
+            return (
+                <NavLink exact activeClassName="active" to="/result" >
+                    <button
+                        className="nextButtonStyle"
+                        value="/result"
+                        onClick={this.onButtonClick}
+                    >
+                        Submit your application
+                    </button>
+                </NavLink>
+            );
+        } else if (pageLink === '/result') {
+            return (
+                <button
+                    className="nextButtonStyle"
+                    value="/finish"
+                    onClick={this.onButtonClick}
+                >
+                    Take me there!
+                </button>
             );
         }
         
@@ -45,7 +74,8 @@ class Nav extends React.Component {
             <NavLink exact activeClassName="active" to="/family" >
                 <button 
                     className="nextButtonStyle"
-                    onClick={this.nextButtonClick}
+                    value="/family"
+                    onClick={this.onButtonClick}
                 >
                     Next
                 </button>
