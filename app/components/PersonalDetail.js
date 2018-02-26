@@ -22,14 +22,16 @@ class PersonalDetail extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({ value: event.target.value });
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState({ [name]: value });
     }
 
     render() {
         return (
             <form
                 className="personalFormStyle"
-                onSubmit={this.handleSubmit}
             >
                 <div className="name">
                     <label className="labelStyle">
@@ -39,6 +41,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="name"
                         value={this.state.name}
                         onChange={this.handleChange}
                     />
@@ -51,6 +54,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" i.e: XXXXXX-XX-XXXX"
                         type="text"
+                        name="ic"
                         value={this.state.ic}
                         onChange={this.handleChange}
                     />
@@ -63,6 +67,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="nat"
                         value={this.state.nat}
                         onChange={this.handleChange}
                     />
@@ -75,6 +80,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" DD/MM/YYYY"
                         type="text"
+                        name="dob"
                         value={this.state.dob}
                         onChange={this.handleChange}
                     />
@@ -83,8 +89,11 @@ class PersonalDetail extends React.Component {
                     <label className="labelStyle">
                         Gender
                     </label>
-                    <select className="inputStyle">
-
+                    <select 
+                        className="inputStyle"
+                        name="gender"
+                        onChange={this.handleChange}
+                    >
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -98,6 +107,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="address"
                         value={this.state.address}
                         onChange={this.handleChange}
                     />
@@ -110,6 +120,7 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="postcode"
                         value={this.state.postcode}
                         onChange={this.handleChange}
                     />
@@ -118,7 +129,7 @@ class PersonalDetail extends React.Component {
                     <label className="labelStyle">
                         State
                     </label>
-                    <select className="inputStyle">
+                    <select className="inputStyle" name="state" onChange={this.handleChange}>
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="Selangor">Selangor</option>
                         <option value="Sarawak">Sarawak</option>
@@ -146,6 +157,8 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="tel"
+                        name="phone"
+                        value={this.state.phone}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -157,6 +170,8 @@ class PersonalDetail extends React.Component {
                         className="inputStyle"
                         placeholder=" Type something here"
                         type="text"
+                        name="email"
+                        value={this.state.email}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -164,7 +179,7 @@ class PersonalDetail extends React.Component {
                     <label className="labelStyle">
                         Are you currently working?
                     </label>
-                    <select className="inputStyle">
+                    <select className="inputStyle" name="work" onChange={this.handleChange}>
                         <option value="" selected disabled hidden>Choose here</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
